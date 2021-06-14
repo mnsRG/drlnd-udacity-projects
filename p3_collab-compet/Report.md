@@ -29,8 +29,8 @@ MADDPG is general-purpose in the sense that it can be trained for environments w
 ### Method
 
 - The current implementation is a vanilla MADDPG algorithm with 2 cooperative agents.
-- The Actor network(s) is a 2-Layer neural network of 64 and 64 nodes each, followed by a tanh function.
-- The Critic network(s) is a 2-Layer neural network of 64 and 64 nodes each. After the concatenation of observations and actions a batch normalisation layer is applied.
+- The Actor network(s) is a 2-Layer neural network of <b>64</b> and <b>64</b> units each, both followed by a <b>relu</b> function. In the output layer a <b>tanh</b> activation function is used.
+- The Critic network(s) is a 2-Layer neural network of <b>64</b> and <b>64</b> units each, both followed by a <b>relu</b> function. After the concatenation of observations and actions a <b>batch normalisation</b> layer is applied.
 - For each episode the agent is trained for the <b>maximum timesteps</b> until one of the agents is *done*.
 - The networks are updated with <b>update_steps = 1</b> iterations, every <b>update_every = 1</b> timestep.
 - The replay buffer size is set to <b>buffer_size = 1000000</b>.
