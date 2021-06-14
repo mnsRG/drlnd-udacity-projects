@@ -109,6 +109,6 @@ Even then, I trained the agents more than 10 times with exactly the same hyper-p
 
 Some possible improvements involve:
 1. Updating the networks after larger time frames to tackle instability issues. (I 've tried that already but probably had to adjust the rest of the hyper-parameters respectively in order to make it work)
-2. Using a Prioritised Replay Buffer. (It's not uncommon that in the middle of the training, while the algorithm seems to converge, that it loses momentum and falls back to lower scores. Using PER might help to take better advantage of the previous experiences)
-3. Using dropout layers in the actor networks. (Falling back after being to close to convergence might also be related to overfitting issues where dropout layers could potentially help)
+2. Using a Prioritised Replay Buffer. (It's not uncommon that the algorithm, while in the middle of the training seems to converge, to lose momentum and fall back to lower scores. Using PER might help to take better advantage of the previous experiences)
+3. Using dropout layers in the actor networks. (Falling back after being close to convergence might also be related to overfitting issues where dropout layers could potentially help)
 4. Following a grid search approach to approximate an optimal set of hyper-parameters.
